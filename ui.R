@@ -3,7 +3,6 @@
 ## -----
 
 library("shiny")
-library("markdown")
 
 ui <- fluidPage(
   mainPanel(
