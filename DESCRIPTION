@@ -1,0 +1,21 @@
+Package: pdfcount
+Type: Package
+Title: Word Counts for PDF Documents
+Description: Count words in a PDF in R or via a Shiny application.
+License: MIT + file LICENSE
+Version: 0.1.1
+Date: 2018-08-21
+Authors@R: c(person("Thomas J.", "Leeper",
+                    role = c("aut", "cre"), 
+                    email = "thosjleeper@gmail.com",
+                    comment = c(ORCID = "0000-0003-4097-6326")))
+URL: https://leeper.shinyapps.io/pdfcount/
+BugReports: https://github.com/leeper/pdfcount/issues
+Imports:
+  pdftools,
+  dplyr,
+  tidytext
+Suggests:
+  testthat
+ByteCompile: true
+RoxygenNote: 6.0.1
