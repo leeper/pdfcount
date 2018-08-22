@@ -16,6 +16,7 @@ Imports:
   dplyr,
   tidytext
 Suggests:
-  testthat
+  testthat,
+  shiny
 ByteCompile: true
 RoxygenNote: 6.0.1

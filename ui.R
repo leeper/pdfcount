@@ -5,9 +5,10 @@
 library("shiny")
 
 ui <- fluidPage(
-  titlePanel("Count Words in a PDF Document"),
-  sidebarLayout(
-    sidebarPanel(
+  h2("Count Words in a PDF Document", style = "text-align:center;"),
+  br(),
+  fluidRow(
+    column(3, 
       strong(p("Upload your file here:")),
       fileInput("infile", label = NULL, accept = "application/pdf"),
       textInput("pages", "Page numbers to count:", "", width = "70%"),
@@ -18,10 +19,13 @@ ui <- fluidPage(
       checkboxInput("split_hyphenated", "Split hyphenated words?", FALSE),
       checkboxInput("split_urls", "Tokenize URLs?", FALSE)
     ),
-    mainPanel(
+    column(9,
       strong(textOutput("grand_total")),
       p(""),
       plotOutput("barplot", width = "100%", height = "600px")
     )
-  )
+  ),
+  br(),
+  tags$footer(
+    tags$p("Copyright Thomas J. Leeper (2018).", a("MIT-licensed.", href = "https://opensource.org/licenses/MIT"), "Source code and R package available from: ", a("https://github.com/leeper/pdfcount", href = "https://github.com/leeper/pdfcount")))
 )
