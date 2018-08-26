@@ -5,9 +5,6 @@ all: build
 NAMESPACE: R/*
 	Rscript -e "devtools::document()"
 
-README.md: README.Rmd
-	Rscript -e "knitr::knit('README.Rmd')"
-
 README.html: README.md
 	pandoc -o README.html README.md
 
@@ -29,6 +26,3 @@ shiny: NAMESPACE
 
 deploy: NAMESPACE
 	Rscript -e "rsconnect::deployApp(appFiles = c("ui.R", "server.R", "R/word_count.R"), forceUpdate = TRUE)"
-
-website: R/* README.md DESCRIPTION
-	Rscript -e "pkgdown::build_site()"

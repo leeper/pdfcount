@@ -3,8 +3,8 @@ Type: Package
 Title: Word Counts for PDF Documents
 Description: Count words in a PDF in R or via a Shiny application.
 License: MIT + file LICENSE
-Version: 0.1.2
-Date: 2018-08-22
+Version: 0.1.3
+Date: 2018-08-26
 Authors@R: c(person("Thomas J.", "Leeper",
                     role = c("aut", "cre"), 
                     email = "thosjleeper@gmail.com",
@@ -18,6 +18,6 @@ Imports:
 Suggests:
   testthat,
   shiny,
-  ggplot2
+  plotly
 ByteCompile: true
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.0

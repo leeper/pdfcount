@@ -21,7 +21,7 @@
 ^ignore$
 ^inst/doc/.+\.log$
 ^inst/doc/.+\.Rmd$
-^rsconnect/.+$
+^inst/rsconnect/.+$
 ^vignettes/figure$
 ^vignettes/figure/.+$
 ^vignettes/.+\.aux$

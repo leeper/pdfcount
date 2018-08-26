@@ -63,11 +63,10 @@ function(
         char <- gsub("(?<=.)-(?=.)", "", char, perl = TRUE)
     }
     
-    all_pages <- seq_len(length(char))
-    
     # subset pages
-    to_count <- rep(FALSE, length(char))
+    all_pages <- seq_len(length(char))
     if (!is.null(pages)) {
+        to_count <- rep(FALSE, length(char))
         ## inclusions
         pos <- pages[pages > 0]
         if (length(pos)) {
@@ -82,7 +81,7 @@ function(
         }
         ## subset
         char <- char[to_count]
-        pages <- pages[to_count]
+        pages <- all_pages[to_count]
     } else {
         pages <- all_pages
     }
