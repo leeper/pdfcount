@@ -88,7 +88,7 @@ function(
     
     # tidy lines
     txt_df <- data.frame(page = pages, text = char, stringsAsFactors = FALSE)
-    tidy_lines <- tidytext::unnest_tokens(txt_df, line, text, token = "lines")
+    tidy_lines <- tokenize_to_lines(txt_df)
     
     # remove likely figure/title captions
     if (!isTRUE(count_captions)) {
@@ -101,7 +101,7 @@ function(
     }
     
     # tidy words
-    tidy_words <- tidytext::unnest_tokens(tidy_lines, word, line, drop = FALSE)
+    tidy_words <- tokenize_to_words(tidy_lines)
     
     # handle numbers
     if (!isTRUE(count_numbers)) {
@@ -127,4 +127,14 @@ function(
     } else {
         out
     }
+}
+
+tokenize_to_lines <- function(dat) {
+    x <- tidytext::unnest_tokens(dat, line, text, token = "lines")
+    x
+}
+
+tokenize_to_words <- function(dat) {
+    x <- tidytext::unnest_tokens(dat, word, line, drop = FALSE)
+    x
 }

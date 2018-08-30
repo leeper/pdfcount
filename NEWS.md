@@ -1,3 +1,7 @@
+# pdfcount 0.1.4
+
+* Added a test suite. (#3)
+
 # pdfcount 0.1.3
 
 * Change plot to interactive plotly graphics.
