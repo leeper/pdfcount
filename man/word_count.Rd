@@ -38,6 +38,7 @@ This is useful for obtaining a word count for a LaTeX-compiled PDF. Counting wor
 It is often desirable to have word counts excluding tables and figures. A solution on TeX StackExchange (\url{https://tex.stackexchange.com/a/352394/30039}) provides guidance on how to exclude tables and figures (or any arbitrary LaTeX environment) from a compiled document, which may be useful before attempting to word count the PDF.
 }
 \examples{
+\dontrun{
 # "R-intro.pdf" manual
 rintro <- file.path(Sys.getenv("R_HOME"), "doc", "manual", "R-intro.pdf")
 
@@ -49,7 +50,7 @@ rintro <- file.path(Sys.getenv("R_HOME"), "doc", "manual", "R-intro.pdf")
 word_count(rintro)      # all pages (105 pages, 37870 words)
 word_count(rintro, 1:3) # pages 1-3
 word_count(rintro, -1)  # skip first page
-
+}
 }
 \author{
 Thomas J. Leeper <thosjleeper@gmail.com>

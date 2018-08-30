@@ -15,6 +15,7 @@
 #' 
 #' @author Thomas J. Leeper <thosjleeper@gmail.com>
 #' @examples
+#' \dontrun{
 #' # "R-intro.pdf" manual
 #' rintro <- file.path(Sys.getenv("R_HOME"), "doc", "manual", "R-intro.pdf")
 #' 
@@ -26,7 +27,7 @@
 #' word_count(rintro)      # all pages (105 pages, 37870 words)
 #' word_count(rintro, 1:3) # pages 1-3
 #' word_count(rintro, -1)  # skip first page
-#'
+#' }
 #' @import pdftools
 #' @import dplyr
 #' @import tidytext
