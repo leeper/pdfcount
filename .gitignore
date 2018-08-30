@@ -2,4 +2,3 @@ rsconnect/*
 tests/testthat/*.aux
 tests/testthat/*.log
 tests/testthat/*.pdf
-tests/testthat/*.R
