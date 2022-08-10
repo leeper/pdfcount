@@ -51,7 +51,7 @@ function(
     ## unnest_tokens() splits URLs by default into multiple tokens
     if (!isTRUE(split_urls)) {
         # borrowed from: https://stackoverflow.com/a/8234912/2338862
-        url_regex <- "((([A-Za-z]{3,9}:(?:\\/\\/)?)(?:[-;:&=+$,\\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=+$,\\w]+@)[A-Za-z0-9.-]+)((?:\\/[\\+~%\\/.\\w-_]*)?\\??(?:[-\\\\+=&;%@.\\w_]*)#?(?:[\\w]*))?)"
+        url_regex <- "((([A-Za-z]{3,9}:(?:\\/\\/)?)(?:[-;:&=+$,\\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=+$,\\w]+@)[A-Za-z0-9.-]+)((?:\\/[\\+~%\\/.\\w\\-_]*)?\\??(?:[-\\\\+=&;%@.\\w_]*)#?(?:[\\w]*))?)"
         char <- gsub(url_regex, "URL", char, perl = TRUE)
     }
     
